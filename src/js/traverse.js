@@ -29,7 +29,7 @@ const levelOrder = (root) => {
         result.push(subqueue);
     }
     return result;
-}
+};
 
 const inorder = (root, result = []) => {
     if(root === null) return;
@@ -45,7 +45,7 @@ const inorder = (root, result = []) => {
     }
 
     return result;
-}
+};
 
 const preorder = (root, result = []) => {
     if(root === null) return;
@@ -61,7 +61,7 @@ const preorder = (root, result = []) => {
     }
     
     return result;
-}
+};
 
 const postorder = (root, result = []) => {
     if(root === null) return;
@@ -78,4 +78,4 @@ const postorder = (root, result = []) => {
     result.push(root.data);
 
     return result;
-}
+};

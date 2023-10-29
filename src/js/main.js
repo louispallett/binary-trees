@@ -2,6 +2,7 @@ import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
 import { findNode, insertNode, removeNode } from "./functionality";
 import { levelOrder, inorder, preorder, postorder } from './traverse';
+import { height, depth, isBalanced, rebalance } from './attributes';
 
 export { Node };
 
