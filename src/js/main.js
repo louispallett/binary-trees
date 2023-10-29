@@ -79,3 +79,4 @@ prettyPrint(tree.root);
 console.log(levelOrder(tree.root));
 console.log(inorder(tree.root));
 console.log(preorder(tree.root));
+console.log(postorder(tree.root));

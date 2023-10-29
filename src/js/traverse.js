@@ -35,11 +35,13 @@ const inorder = (root, result = []) => {
     if(root === null) return;
     
     if(root.left) {
-        return inorder(result, root.left);
+        inorder(root.left, result);
     }
 
+    result.push(root.data);
+
     if(root.right) {
-        return inorder(result, root.right);
+        inorder(root.right, result);
     }
 
     return result;
@@ -51,11 +53,11 @@ const preorder = (root, result = []) => {
     result.push(root.data);
     
     if(root.left) {
-        return preorder(root.left, result);
+        preorder(root.left, result);
     }
 
     if(root.right) {
-        return preorder(root.right, result);
+        preorder(root.right, result);
     }
     
     return result;
@@ -63,6 +65,17 @@ const preorder = (root, result = []) => {
 
 const postorder = (root, result = []) => {
     if(root === null) return;
+
+    
+    if(root.left) {
+        preorder(root.left, result);
+    }
+    
+    if(root.right) {
+        preorder(root.right, result);
+    }
+    
+    result.push(root.data);
 
     return result;
 }
