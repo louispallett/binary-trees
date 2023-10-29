@@ -121,5 +121,6 @@ const findNode = (root, value) => {
     root.right = findNode(root.right, value);
   }
 
+  return root;
 };
       
