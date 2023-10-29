@@ -1,6 +1,7 @@
 import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
-import { findNode, insertNode, removeNode, levelOrder } from "./functionality";
+import { findNode, insertNode, removeNode } from "./functionality";
+import { levelOrder } from './traverse';
 
 export { Node };
 
