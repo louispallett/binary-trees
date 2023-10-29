@@ -71,3 +71,10 @@ prettyPrint(tree.root);
 
 removeNode(tree.root, 4);
 prettyPrint(tree.root);
+
+findNode(tree.root, 55);
+findNode(tree.root, -55);
+findNode(tree.root, 94);
+findNode(tree.root, 4);
+
+// prettyPrint(tree.root);

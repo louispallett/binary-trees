@@ -103,5 +103,23 @@ const findNode = (root, value) => {
     If not, loop through the right. 
       If equal, return true.
   Else return false. */
+
+  // Base case 
+  if(root == null) {
+    console.log("Not found :(");
+    return null;
+  }
+
+  if(root.data == value) {
+    console.log("Found :)");
+    return root;
+  }
+
+  if(root.data > value) {
+    root.left = findNode(root.left, value);
+  } else if (root.data < value) {
+    root.right = findNode(root.right, value);
+  }
+
 };
       
