@@ -1,4 +1,4 @@
-export { levelOrder, inorder };
+export { levelOrder, inorder, preorder, postorder };
 
 const levelOrder = (root) => {
     /* Level-Order Traversal - we need to go through the nodes based on level (root level, then to
@@ -45,16 +45,24 @@ const inorder = (root, result = []) => {
     return result;
 }
 
-const preorder = (root) => {
-    if(root === null) return [];
-    const result = [];
+const preorder = (root, result = []) => {
+    if(root === null) return;
 
+    result.push(root.data);
+    
+    if(root.left) {
+        return preorder(root.left, result);
+    }
+
+    if(root.right) {
+        return preorder(root.right, result);
+    }
+    
     return result;
 }
 
-const postorder = (root) => {
-    if(root === null) return [];
-    const result = [];
+const postorder = (root, result = []) => {
+    if(root === null) return;
 
     return result;
 }
