@@ -1,6 +1,8 @@
 import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
-import { findNode, removeNode } from "./functionality";
+import { findNode, insertNode, removeNode } from "./functionality";
+
+export { Node };
 
 class Node {
     constructor(data) {
@@ -32,24 +34,6 @@ class Tree {
       }
 }
 
-const insertNode = (root, value) => {
-    root = insertRec(root, value)
-    return root;
-};
-
-const insertRec = (root, value) => {
-    if(root == null) {
-        root = new Node(value);
-        return root;
-    }
-
-    if(value < root.data) {
-        root.left = insertRec(root.left, value)
-    } else if (value > root.data) {
-        root.right = insertRec(root.right, value)
-    }
-};
-
 const prettyPrint = (node, prefix = "", isLeft = true) => {
     if (node === null) {
       return;
@@ -68,4 +52,7 @@ const conciseArray = removeDuplicates(testArray);
 const sortedArray = sort(conciseArray);
 const tree = new Tree(sortedArray);
 console.log(tree);
+prettyPrint(tree.root);
+
+const newRoot = insertNode(tree.root, 16);
 prettyPrint(tree.root);
