@@ -1,6 +1,6 @@
 import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
-import { findNode, insertNode, removeNode } from "./functionality";
+import { findNode, insertNode, removeNode, levelOrder } from "./functionality";
 
 export { Node };
 
@@ -74,3 +74,5 @@ prettyPrint(tree.root);
 findNode(tree.root, 7);
 
 prettyPrint(tree.root);
+
+console.log(levelOrder(tree.root));
