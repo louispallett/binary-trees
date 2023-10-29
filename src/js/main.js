@@ -1,7 +1,7 @@
 import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
 import { findNode, insertNode, removeNode } from "./functionality";
-import { levelOrder } from './traverse';
+import { levelOrder, inorder } from './traverse';
 
 export { Node };
 
@@ -77,3 +77,4 @@ findNode(tree.root, 7);
 prettyPrint(tree.root);
 
 console.log(levelOrder(tree.root));
+console.log(inorder(tree.root));
