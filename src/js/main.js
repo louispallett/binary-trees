@@ -2,7 +2,7 @@ import '../scss/styles.scss';
 import { removeDuplicates, sort } from './sorting';
 import { findNode, insertNode, removeNode } from "./functionality";
 import { levelOrder, inorder, preorder, postorder } from './traverse';
-import { height, depth, isBalanced, rebalance } from './attributes';
+import { heightOfNode, depth, isBalanced, rebalance } from './attributes';
 
 export { Node };
 
@@ -55,7 +55,7 @@ const conciseArray = removeDuplicates(testArray);
 const sortedArray = sort(conciseArray);
 console.log(sortedArray);
 const tree = new Tree(sortedArray);
-// prettyPrint(tree.root);
+prettyPrint(tree.root);
 
 
 insertNode(tree.root, -1);
@@ -82,8 +82,9 @@ console.log(inorder(tree.root));
 console.log(preorder(tree.root));
 console.log(postorder(tree.root));
 
-console.log("Height of tree is: " + height(tree.root));
-
 removeNode(tree.root, -1);
 removeNode(tree.root, 64);
-console.log("Height of tree is: " + height(tree.root));
+console.log("Height of 7: " + heightOfNode(tree.root, 7));
+prettyPrint(tree.root);
+
+console.log(isBalanced(tree.root));
