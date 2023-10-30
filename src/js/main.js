@@ -4,7 +4,7 @@ import { findNode, insertNode, removeNode } from "./functionality";
 import { levelOrder, inorder, preorder, postorder } from './traverse';
 import { heightOfNode, depth, isBalanced, rebalance } from './attributes';
 
-export { Node };
+export { Node, Tree };
 
 class Node {
     constructor(data) {
@@ -54,7 +54,7 @@ const testArray = [55, 12, 88, 12, 45, 4, 5, 7, 88, 97, 94, 66, 523, 1, 123, 71,
 const conciseArray = removeDuplicates(testArray);
 const sortedArray = sort(conciseArray);
 console.log(sortedArray);
-const tree = new Tree(sortedArray);
+let tree = new Tree(sortedArray);
 prettyPrint(tree.root);
 
 
@@ -82,9 +82,12 @@ console.log(inorder(tree.root));
 console.log(preorder(tree.root));
 console.log(postorder(tree.root));
 
-removeNode(tree.root, -1);
+// removeNode(tree.root, -1);
 removeNode(tree.root, 64);
 console.log("Height of 7: " + heightOfNode(tree.root, 7));
 prettyPrint(tree.root);
 
 console.log(isBalanced(tree.root));
+
+tree = rebalance(tree.root);
+prettyPrint(tree.root);

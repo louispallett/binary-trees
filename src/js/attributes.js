@@ -1,3 +1,6 @@
+import { inorder } from "./traverse";
+import { Tree } from "./main";
+
 export { heightOfNode, depth, isBalanced, rebalance };
 
 let heightCounter = -1;
@@ -43,7 +46,7 @@ const depthOfTree = (root) => {
     } else {
         return rDepth + 1;
     }
-}
+};
 
 const isBalanced = (root) => {
     const lDepth = depthOfTree(root.left);
@@ -53,5 +56,11 @@ const isBalanced = (root) => {
 };
 
 const rebalance = (root) => {
+    // Actually check whether necessary
+    if(isBalanced(root)) return "Already Balanced";
 
+    // Traverse through the tree - we choose inorder() here, because inorder traversal returns the a SORTED array, whilst
+    // the other methods don't - we need the array to be (guess what?) in order to create a new tree.
+    const newArray = inorder(root);
+    return new Tree(newArray);
 };
