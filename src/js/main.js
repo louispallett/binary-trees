@@ -81,3 +81,9 @@ console.log(levelOrder(tree.root));
 console.log(inorder(tree.root));
 console.log(preorder(tree.root));
 console.log(postorder(tree.root));
+
+console.log("Height of tree is: " + height(tree.root));
+
+removeNode(tree.root, -1);
+removeNode(tree.root, 64);
+console.log("Height of tree is: " + height(tree.root));
