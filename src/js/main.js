@@ -91,3 +91,10 @@ console.log(isBalanced(tree.root));
 
 tree = rebalance(tree.root);
 prettyPrint(tree.root);
+
+removeNode(tree.root, 71);
+insertNode(tree.root, 600);
+prettyPrint(tree.root);
+console.log(isBalanced(tree.root));
+tree = rebalance(tree.root);
+prettyPrint(tree.root);
