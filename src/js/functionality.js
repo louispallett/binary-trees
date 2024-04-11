@@ -11,9 +11,9 @@ const insertRec = (root, value) => {
   }
 
   if(value < root.data) {
-      root.left = insertRec(root.left, value)
+    root.left = insertRec(root.left, value)
   } else if (value > root.data) {
-      root.right = insertRec(root.right, value)
+    root.right = insertRec(root.right, value)
   }
 
   return root;

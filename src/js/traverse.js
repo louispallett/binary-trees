@@ -18,11 +18,11 @@ const levelOrder = (root) => {
             subqueue.push(node.data);
 
             if(node.left) {
-            queue.unshift(node.left);
+                queue.unshift(node.left);
             }
             
             if(node.right) {
-            queue.unshift(node.right);
+                queue.unshift(node.right);
             }
         }
 
